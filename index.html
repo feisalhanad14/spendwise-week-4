@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpendWise | Budget Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- "defer" makes the script run after the page has been parsed -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <span class="wordmark">SpendWise</span>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <h1>Find out what's left of your budget.</h1>
+      <p class="lead">
+        Answer a few prompts about your monthly budget and spending.
+        SpendWise adds up your expenses and shows your remaining balance in the browser console.
+      </p>
+      <button id="start-btn" class="btn" type="button">Start budget check</button>
+      <p class="hint">
+        Open the console first: press <kbd>F12</kbd>, then choose the <strong>Console</strong> tab.
+      </p>
+    </section>
+
+    <section class="how" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
+        <li>Open your browser's developer console.</li>
+        <li>Select <strong>Start budget check</strong>.</li>
+        <li>Enter your name, budget and expenses when the prompts appear.</li>
+        <li>Read your labeled results in the console.</li>
+      </ol>
+    </section>
+
+    <section class="preview" aria-labelledby="preview-title">
+      <h2 id="preview-title">What you'll see in the console</h2>
+      <pre class="console" aria-label="Example console output"><code>========== SpendWise Budget Summary ==========
+Name: Amina
+Monthly budget: KES 40,000
+
+Expenses
+  Rent: KES 6,000
+  Food: KES 3,500
+  Transport: KES 1,500
+  Other: KES 1,000
+
+Total expenses: KES 12,000
+Spent so far: 30.0% of budget
+Remaining balance: KES 28,000
+Status: You are within budget.
+==============================================</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SpendWise &ndash; JavaScript foundation, Week 6.</p>
+  </footer>
+</body>
+</html>
